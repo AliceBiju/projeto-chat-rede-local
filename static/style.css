@@ -1,0 +1,75 @@
+
+h1{
+    text-align: center;
+
+}
+body {
+    background-color: #f8f9fa;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+.chat-box {
+    height: 70vh;
+    overflow-y: auto;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.message {
+    margin-bottom: 10px;
+    max-width: 70%;
+    padding: 15px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    font-size: 0.9rem;
+    position: relative;
+}
+.message .time {
+    font-size: 0.7rem;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+.message.own {
+    margin-left: auto;
+    background-color: #9100a4a7;
+    color: white;
+    text-align: right;
+}
+.message.other {
+    margin-right: auto;
+    background-color: #a2137e8f;
+    color: black;
+    text-align: left;
+}
+
+#theme-toggle {
+    background-color: #000;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #ddd;
+}
+body.dark .chat-box {
+    background: #1e1e1e;
+    border-color: #444;
+}
+body.dark .message.own {
+    background-color: #6a0080cc;
+    color: #eee;
+}
+body.dark .message.other {
+    background-color: #800080cc;
+    color: #ddd;
+}
+body.dark .message .time {
+    color: #aaa;
+}
